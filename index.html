@@ -4,9 +4,38 @@
       <TITLE>
          MS 
       </TITLE>
+	  <style>
+		.h1 {
+			font-size: 950%
+		}
+	  </style
    </HEAD>
 <BODY>
-   <H1>Hi</H1>
-   <P>I am Mike and i go to the army.</P> 
+   <h2 style="text-align: center">Hi</h2>
+   <P style="text-align: center">I am Mike and i gone to the army and will be back over:</P> 
+   <p class="h1" style="text-align:center" id="timer"></p>
+
+<script>
+
+	var countDownDate = new Date("Nov 6, 2019 18:00:00").getTime();
+	var x = setInterval(function() {
+		var now = new Date().getTime();
+		var distance = countDownDate - now;
+
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+		+ minutes + "m " + seconds + "s ";
+		document.getElementById("timer").style.color = "green";
+	 
+		if (distance < 0) {
+			clearInterval(x);
+			document.getElementById("timer").innerHTML = "EXPIRED";
+		}
+	}, 1000);
+</script>
 </BODY>
 </HTML>
