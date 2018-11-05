@@ -8,11 +8,14 @@
 		.h1 {
 			font-size: 950%
 		}
+		.p {
+			color: red
+		}
 	  </style
    </HEAD>
-<BODY>
-   <h2 style="text-align: center">Hi</h2>
-   <P style="text-align: center">I am Mike and i gone to the army and will be back over:</P> 
+<BODY background="images/bg.jpg">
+   <h2 class="p" style="text-align: center">Hi</h2>
+   <P class="p" style="text-align: center">I am Mike and i gone to the army and will be back over:</P> 
    <p class="h1" style="text-align:center" id="timer"></p>
 
 <script>
@@ -29,7 +32,7 @@
 
 		document.getElementById("timer").innerHTML = days + "d " + hours + "h "
 		+ minutes + "m " + seconds + "s ";
-		document.getElementById("timer").style.color = "green";
+		document.getElementById("timer").style.color = "red";
 	 
 		if (distance < 0) {
 			clearInterval(x);
